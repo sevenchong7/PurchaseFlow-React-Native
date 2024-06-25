@@ -216,8 +216,8 @@ const CartList = () => {
     return(
         <View>
             <SafeAreaView style={styles.header}>
-                <View style={{flexDirection:'row', justifyContent:'center'}}>
-                    <View style={{flex:1,alignItems:'center'}}>
+                <View style={{flexDirection:'row'}}>
+                    <View style={{flex:1,alignItems:'center', marginBottom:-25}}>
                         <TouchableOpacity onPress={() => handleNavigateBack()}>
                             <Ionicons name="chevron-back-outline" size={40} color="grey" />
                         </TouchableOpacity>
@@ -227,7 +227,9 @@ const CartList = () => {
                             My Cart
                         </Text>
                     </View>
-                    <View style={{flex:1}}></View>
+                    <View style={{flex:1}}>
+                        
+                    </View>
                 </View>
             </SafeAreaView>
             <View>
@@ -272,20 +274,35 @@ const styles = StyleSheet.create({
     },
     header:{
         backgroundColor: 'white',
-        // padding: 20,
+        // height:10,
         width: '100%',
-        // marginVertical: 8,
+        // alignItems:'flex-end',
+        // marginVertical: -8,
         // flexDirection: 'row',
         // justifyContent: 'center',
         // alignItems: 'center',
         // borderRadius: 8,
-        // borderColor: '#ddd',
-        shadowOpacity: 0.2,
+        borderColor: '#ddd',
+        borderBottomWidth: 0.5,
+        shadowOpacity: 0.3,
         shadowColor: 'black',
         shadowRadius: 10,
         shadowOffset: { width: 0, height: 10 },
-        borderBottomWidth: 0.3,
         borderColor: 'grey',
+        zIndex:999,
+        elevation: 3, 
+    },
+    headerText:{
+        marginBottom:-20,
+        fontSize: 28,
+        // margin:10,
+        fontWeight:'500',
+        color: '#B8860B',
+        justifyContent:'center',
+        alignItems:'center'
+        // justifyContent:'center',
+        // alignItems:'center'
+
     },
     itemContainer: { 
 		alignItems: 'center', 
